@@ -1,0 +1,400 @@
+/* variable roots */
+:root{
+    --main-color:#1d9bf0;
+    --main-font-color : #0f1419;
+    --main-background-color :#ffffff;
+    --border : 1px solid #eee;
+    --light-color : #777;
+    --hover : #eff3f4;
+}
+/* End variable roots */
+/* start global rules */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+
+}
+ul li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    display: block;
+    border-radius: 20px;
+    padding: 10px;
+}
+a:hover{
+    background-color: #c1c1c1;
+}
+body{
+   background-color:var(--main-background-color) ;
+   color:var(--main-font-color)
+   
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+/* End global rules */
+
+/* start responsive for all screens */
+.main-div{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(350px , 1fr));
+}
+ @media (max-width : 1065px) {
+     .main-div {
+         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+     }
+ }
+ @media (max-width : 915px) {
+     .main-div {
+         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+     }
+ }
+ @media (max-width : 840px) {
+     .main-div {
+         grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+     }
+ }
+ @media (max-width : 570px) {
+    .main-div {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+     .nav .profile .text{
+         display: none;
+     }
+     .nav .icons button{
+         display: none;
+     }
+     
+ }
+ @media (max-width : 560px) {
+    .main-div {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    
+    nav{
+        display: none;
+    }
+ }
+ /* End responsive for all screens */
+
+ /* start navigation part */
+.nav{
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    padding: 24px;
+    padding-left: 60px;
+    position: fixed;
+}
+.nav > a i{
+    color: var(--main-color);
+    font-size: 40px
+}
+.nav .icons{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.nav .icons li{
+    padding-right: 80px;
+}
+.nav .icons li a {
+    color: var(--main-font-color);
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.nav .icons button{
+    background-color: var(--main-color);
+    color: var(--main-background-color);
+    border: none;
+    border-radius: 27px;
+    width: 154px;
+    padding: 14px 10px 14px 10px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.nav .icons button:hover{
+    cursor: pointer;
+}
+.nav .icons li a i {
+    font-size: 22px;
+    margin-right: 10px;
+}
+.container .nav .profile a {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+.container .nav .profile a img {
+    max-width: 40px;
+    border-radius: 50%;
+}
+.container .nav .profile a .text {
+   font-size: 10px;
+   color: var(--main-font-color);
+}
+/* end nav */
+
+/* start news feed  */
+.news-feed{
+    padding: 24px;
+    border: var(--border);
+}
+/* start home part */
+.news-feed .home {
+    display: flex;
+    flex-direction: column;
+    border-bottom: var(--border);
+    
+}
+.news-feed .home .user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.news-feed .home .user .personal-user{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    text-transform: capitalize;
+    color: var(--light-color);
+}
+.news-feed .home .user img{
+    max-width: 40px;
+    border-radius: 50%;
+}
+.news-feed .home .user button{
+    display: none;
+    background-color: var(--main-background-color);
+    color: var(--main-color);
+    border: var(--border);
+    border-radius: 27px;
+    width: 112px;
+    padding: 5px 7px 5px 7px;
+    text-transform: capitalize;
+    font-weight: bold;
+    border: 1px solid var(--light-color);
+    margin-left: -170px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.news-feed .home .tweet-area{
+    position: relative;
+}
+.news-feed .home .placeholder{
+    color: var(--light-color);
+    margin: 17px 0px;
+    position: absolute;
+    
+}
+.news-feed .home .input{
+    margin-top: 17px;
+    outline: none;
+    color: var(--light-color);
+    position: relative;
+    z-index: 5;
+}
+
+.news-feed .home .to-emoji{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 2px 15px 2px;
+    align-items: center;
+}
+.news-feed .home .to-emoji .icons i{
+    color:var(--main-color);
+    color: var(--main-color);
+    margin-right: 10px;
+}
+.news-feed .home .to-emoji button{
+    background-color: #8ecdf8;
+    color: var(--main-background-color);
+    border: none;
+    border-radius: 27px;
+    width: 112px;
+    padding: 5px 7px 5px 7px;
+    text-transform: capitalize;
+    font-weight: bold;
+    border: 1px solid var(--light-color);
+    margin-left: -170px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+/* end home part */
+
+/* start tweets part*/
+.tweets .tweet{
+    padding: 10px 0;
+    border-bottom: var(--border);
+}
+.tweets .tweet .user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.tweets .tweet .user a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: capitalize;
+    color: var(--light-color);
+}
+.tweets .tweet .user a img{
+    max-width: 40px;
+    border-radius: 50%;
+}
+
+.tweets .tweet .content{
+    padding: 1px 0;
+    padding-left: 48px;
+    font-weight: bold;
+    line-height: 1.7;
+}
+.tweets .tweet-icons{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 15px;
+}
+.tweets  .tweet-icons button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: var(--main-background-color);
+}
+/**/
+.tweets .tweet {
+    padding: 10px 0;
+    border-bottom: var(--border);
+}
+
+.tweets .tweet .user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tweets .tweet .user a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: capitalize;
+    color: var(--light-color);
+}
+
+.tweets .tweet .user a img {
+    max-width: 40px;
+    border-radius: 50%;
+}
+
+.tweets .tweet .content {
+    padding: 1px 0;
+    padding-left: 48px;
+    font-weight: bold;
+    line-height: 1.7;
+}
+
+.tweets .tweet .content img {
+    max-width: 100%;
+}
+
+.tweets .itweet .icons {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 15px;
+}
+/* end tweets part */
+
+/* End news part */
+
+/* start hashtags */
+
+.hash img{
+    max-width: 40px;
+    border-radius: 50%;
+}
+
+.hash{
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    border: var(--border);
+}
+
+ @media (max-width : 840px) {
+     .hash {
+        display: none;
+     }
+ }
+.hash input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: var(--hover);
+    padding: 15px 0 15px 17px;
+    border-radius: 25px;
+}
+.hash input::placeholder{
+    color: var(--light-color);
+    text-transform: capitalize;
+}
+.hash .hashtags{
+    margin: 15px 0;
+    background-color: var(--hover);
+    padding: 15px;
+    border-radius: 20px;
+}
+.hash .hashtags h3{
+    text-transform: capitalize;
+}
+.hash .hashtags .trends span{
+color: var(--main-color);
+}
+.hash .hashtags .trends li {
+    padding: 10px 0;
+}
+.hash .hashtags .trends li a {
+    color:var(--main-font-color);
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.hash .recommended {
+    background-color: var(--hover);
+    padding: 15px;
+    border-radius: 20px;
+}
+.hash .recommended .user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.hash .recommended .user a{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: capitalize;
+    color: var(--light-color);
+}
+.hash .recommended .user button {
+    border: none;
+    background-color: var(--main-font-color);
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    text-transform: capitalize;
+}
+/* End hashtags */
+
+/* End the Css */
