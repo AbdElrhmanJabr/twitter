@@ -47,7 +47,7 @@ body{
 /* start responsive for all screens */
 .main-div{
     display: grid;
-    grid-template-columns: repeat(auto-fill , minmax(350px , 1fr));
+    grid-template-columns: repeat(auto-fill , minmax(400px , 1fr));
 }
  @media (max-width : 1065px) {
      .main-div {
